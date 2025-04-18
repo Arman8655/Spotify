@@ -105,7 +105,8 @@ public class Main {
         try {
             System.out.println("Attempting to create playlist");
             user.createPlaylist("Favorites");
-        } catch (InvalidOperationException e) {
+        }
+        catch (InvalidOperationException e) {
             System.out.println("Expected error: " + e.getMessage());
         }
 
@@ -114,7 +115,8 @@ public class Main {
             try {
                 user.playMusic(music);
                 System.out.println((i+1) + ". Play successful");
-            } catch (InvalidOperationException e) {
+            }
+            catch (InvalidOperationException e) {
                 System.out.println("Expected play limit error at " + (i+1) + ": " + e.getMessage());
             }
         }
@@ -129,7 +131,8 @@ public class Main {
                 user.playMusic(music);
                 System.out.println((i+1) + ". Play successful");
             }
-        } catch (InvalidOperationException e) {
+        }
+        catch (InvalidOperationException e) {
             System.out.println("Unexpected error: " + e.getMessage());
         }
     }
